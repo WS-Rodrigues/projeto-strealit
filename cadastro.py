@@ -3,9 +3,9 @@ import pandas as pd
 from datetime import date
 
 def gravar_dados(nome, dt_nasc, tipo):
-    if nome and dt_nasc <= date.today():
+    if nome and data_nasc <= date.today():
         with open("clientes.csv", "a", encoding="utf-8") as file:
-            file.write(f"{nome},{dt_nasc},{tipo}\n")
+            file.write(f"{nome},{data_nasc},{tipo}\n")
         st.session_state["sucesso"] = True
     else:
         st.session_state["sucesso"] = False
