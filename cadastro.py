@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
-def gravar_dados(nome, dt_nasc, tipo):
+def gravar_dados(nome, data_nasc, tipo):
     if nome and data_nasc <= date.today():
         with open("clientes.csv", "a", encoding="utf-8") as file:
             file.write(f"{nome},{data_nasc},{tipo}\n")
